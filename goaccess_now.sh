@@ -4,7 +4,8 @@ SITE=$1
 mkdir /tmp/goaccess
 mkdir /tmp/goaccess/$SITE
 
-scp your_user@your_host:/var/log/nginx/$(echo $SITE)_access.log /tmp/goaccess/$SITE
+#You have to be access with SSH key... Check the path of your nginxs logs
+scp your_user@your_remote_host:/var/log/nginx/$(echo $SITE)_access.log /tmp/goaccess/$SITE
 
 echo $SITE
 
